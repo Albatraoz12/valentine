@@ -45,3 +45,21 @@ h1 {
 button:hover {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 430px) {
+  body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .btn {
+    min-height: 1.5rem;
+    padding: 0.6rem;
+    width: 6rem;
+  }
+
+  button:hover {
+    transform: none;
+  }
+}
