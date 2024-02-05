@@ -39,7 +39,7 @@ function App() {
           onClick={() => {
             setCount(count + 5);
             setValentine(false);
-            setTitle('What do you mean No?! 💔💔💔💔💔💔💔💔');
+            setTitle('What do you mean No?! 💔💔💔');
           }}
         >
           No
