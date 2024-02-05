@@ -42,7 +42,7 @@ function App() {
               type='button'
               className='btn'
               onClick={() => {
-                setCount(count + 5);
+                setCount(count + 2);
                 setValentine(false);
                 setTitle('What do you mean No?! 💔💔💔');
               }}
