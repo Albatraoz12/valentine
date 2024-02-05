@@ -11,7 +11,11 @@ function App() {
       <br />
       {valentine.toString()}
       <h1>Will you be my valentine?</h1>
-      <img src='/images/Cat_heart.jpg' alt='cute cat' className='cat-image' />
+      <img
+        src={count > 0 ? '/images/cat_sad.jpg' : '/images/Cat_heart.jpg'}
+        alt='cute cat'
+        className='cat-image'
+      />
       <div className='buttons-container'>
         <button
           type='button'
