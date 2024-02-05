@@ -4,10 +4,11 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
   const [valentine, setValentine] = useState(false);
+  const [title, setTitle] = useState('Will you be my valentine? ♥️');
 
   return (
     <section>
-      <h1>Will you be my valentine?</h1>
+      <h1>{title}</h1>
       {valentine ? (
         <img src='/images/Cat_Dance.gif' alt='dancing cat gif' />
       ) : (
@@ -27,6 +28,7 @@ function App() {
           onClick={() => {
             setValentine(true);
             setCount(0);
+            setTitle('Yiipiie i luv you! ♥️♥️♥️♥️♥️');
           }}
         >
           Yes ofc
@@ -37,6 +39,7 @@ function App() {
           onClick={() => {
             setCount(count + 5);
             setValentine(false);
+            setTitle('What do you mean No?! 💔💔💔💔💔💔💔💔');
           }}
         >
           No
