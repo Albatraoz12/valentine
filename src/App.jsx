@@ -8,7 +8,7 @@ function App() {
     <section>
       <h1>Will you be my valentine?</h1>
       <img
-        src='../public/images/Cute-Cat.jpg'
+        src='../public/images/Cat_heart.jpg'
         alt='cute cat'
         className='cat-image'
       />
