@@ -13,7 +13,7 @@ function App() {
         <img src='/images/Cat_Dance.gif' alt='dancing cat gif' />
       ) : (
         <img
-          src={count > 0 ? '/images/cat_sad.jpg' : '/images/Cat_heart.jpg'}
+          src={count > 2 ? '/images/cat_sad.jpg' : '/images/Cat_heart.jpg'}
           alt='cute cat'
           className='cat-image'
         />
@@ -35,20 +35,23 @@ function App() {
                 setTitle('Yiipiie i luv you! ♥️♥️♥️♥️♥️');
               }}
             >
-              Yes ofc
+              Yes
             </button>
-
-            <button
-              type='button'
-              className='btn'
-              onClick={() => {
-                setCount(count + 2);
-                setValentine(false);
-                setTitle('What do you mean No?! 💔💔💔');
-              }}
-            >
-              No
-            </button>
+            {count >= 18 ? (
+              <></>
+            ) : (
+              <button
+                type='button'
+                className='btn'
+                onClick={() => {
+                  setCount(count + 2);
+                  setValentine(false);
+                  setTitle('What do you mean No?! 💔💔💔');
+                }}
+              >
+                No
+              </button>
+            )}
           </>
         )}
       </div>
