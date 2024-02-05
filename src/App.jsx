@@ -19,31 +19,38 @@ function App() {
         />
       )}
       <div className='buttons-container'>
-        <button
-          type='button'
-          className='btn btn-enhance'
-          style={
-            count > 0 ? { height: `${count}rem`, width: `${count}rem` } : {}
-          }
-          onClick={() => {
-            setValentine(true);
-            setCount(0);
-            setTitle('Yiipiie i luv you! ♥️♥️♥️♥️♥️');
-          }}
-        >
-          Yes ofc
-        </button>
-        <button
-          type='button'
-          className='btn'
-          onClick={() => {
-            setCount(count + 5);
-            setValentine(false);
-            setTitle('What do you mean No?! 💔💔💔');
-          }}
-        >
-          No
-        </button>
+        {valentine ? (
+          <h2>Woohooo you're my valentine!!!</h2>
+        ) : (
+          <>
+            <button
+              type='button'
+              className='btn btn-enhance'
+              style={
+                count > 0 ? { height: `${count}rem`, width: `${count}rem` } : {}
+              }
+              onClick={() => {
+                setValentine(true);
+                setCount(0);
+                setTitle('Yiipiie i luv you! ♥️♥️♥️♥️♥️');
+              }}
+            >
+              Yes ofc
+            </button>
+
+            <button
+              type='button'
+              className='btn'
+              onClick={() => {
+                setCount(count + 5);
+                setValentine(false);
+                setTitle('What do you mean No?! 💔💔💔');
+              }}
+            >
+              No
+            </button>
+          </>
+        )}
       </div>
     </section>
   );
